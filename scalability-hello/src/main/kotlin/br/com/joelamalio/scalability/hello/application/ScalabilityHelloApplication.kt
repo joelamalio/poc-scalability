@@ -12,8 +12,7 @@ import io.javalin.Javalin
 import io.javalin.plugin.json.JavalinJackson
 import java.time.LocalDateTime
 
-
-class ScalabilityApplication {
+class ScalabilityHelloApplication {
     
     private val appName = "scalability-hello"
 
@@ -68,7 +67,7 @@ class ScalabilityApplication {
 }
 
 fun main(args: Array<String>) {
-    ScalabilityApplication().start(
+    ScalabilityHelloApplication().start(
         Int.Companion.getPort(args)
     )
 }
