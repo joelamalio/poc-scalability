@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: scalability-eureka
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    server:
+      wait-time-in-ms-when-sync-empty: 3000
