@@ -1,4 +1,4 @@
-package br.com.joelamalio.scalabilityribbon.controllers
+package br.com.joelamalio.scalabilityribbon.application.controllers
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.cloud.client.discovery.DiscoveryClient
@@ -12,22 +12,22 @@ import org.springframework.web.client.RestTemplate
 class ScalabilityController {
 
     @Autowired
-    var discoveryClient: DiscoveryClient? = null
+    private lateinit var discoveryClient: DiscoveryClient
 
     @Autowired
-    var loadBalancerClient: LoadBalancerClient? = null
+    private lateinit var loadBalancerClient: LoadBalancerClient
 
     @GetMapping("/scalability", produces = [MediaType.APPLICATION_JSON_VALUE])
     fun serverLocation(): String? {
         var result: String? = null
         val serviceId = "scalability-hello"
-        val instances = this.discoveryClient?.getInstances(serviceId)
+        val instances = this.discoveryClient.getInstances(serviceId)
 
         if (instances != null && instances.isNotEmpty()) {
             val restTemplate = RestTemplate()
 
             try {
-                val serviceInstance = this.loadBalancerClient!!.choose(serviceId)
+                val serviceInstance = this.loadBalancerClient.choose(serviceId)
 
                 val url = "http://${serviceInstance.host}:${serviceInstance.port}"
                 result = restTemplate.getForObject(url, String::class.java)
