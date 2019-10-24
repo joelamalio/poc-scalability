@@ -9,5 +9,5 @@ data class Response(
     val serverPort: Int,
     val message: String
 ) {
-    fun server() = "$serverHost:$serverHost"
+    fun server() = "$serverHost:$serverPort"
 }

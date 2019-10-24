@@ -11,7 +11,6 @@ class ScalabilityConsumerApplication {
     private val context = "scalability"
 
     private val timerRequest = 250L
-    private val timerConsole = 1000L
 
     private val metricService = MetricService()
 
@@ -24,12 +23,10 @@ class ScalabilityConsumerApplication {
 
     private fun sendRequest() {
         thread {
-            sleep(timerRequest)
             metricService.execute(host, port, context)
-
-            sleep(timerConsole)
             console()
         }
+        sleep(timerRequest)
         
     }
 

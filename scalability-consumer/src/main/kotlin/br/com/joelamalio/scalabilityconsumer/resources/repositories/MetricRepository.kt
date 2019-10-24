@@ -8,6 +8,6 @@ class MetricRepository {
         database[key] = if (database.containsKey(key)) database[key]!!.plus(1) else 1
     }
 
-    fun listAll(): List<String> = database.map { (k, v) -> "$k : $v" }.sorted()
+    fun listAll(): List<String> = database.map { (k, v) -> "$k => $v" }.sorted()
 
 }
