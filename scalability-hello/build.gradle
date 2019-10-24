@@ -33,7 +33,7 @@ jar {
         attributes(
                 'Implementation-Title': 'Scalability Hello',
                 'Implementation-Version': version,
-                'Main-Class': 'br.com.joelamalio.scalability.hello.application.ScalabilityHelloApplicationKt',
+                'Main-Class': 'br.com.joelamalio.scalabilityhello.application.ScalabilityHelloApplicationKt',
                 'Package-Version': version,
         )
     }

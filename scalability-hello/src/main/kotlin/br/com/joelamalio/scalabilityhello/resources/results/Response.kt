@@ -1,4 +1,4 @@
-package br.com.joelamalio.scalability.hello.resources.results
+package br.com.joelamalio.scalabilityhello.resources.results
 
 import java.time.LocalDateTime
 

@@ -1,8 +1,8 @@
-package br.com.joelamalio.scalability.hello.application
+package br.com.joelamalio.scalabilityhello.application
 
-import br.com.joelamalio.scalability.hello.application.extensions.getPort
-import br.com.joelamalio.scalability.hello.resources.eureka.EurekaClient
-import br.com.joelamalio.scalability.hello.resources.results.Response
+import br.com.joelamalio.scalabilityhello.application.extensions.getPort
+import br.com.joelamalio.scalabilityhello.resources.eureka.EurekaClient
+import br.com.joelamalio.scalabilityhello.resources.results.Response
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.PropertyNamingStrategy
 import com.fasterxml.jackson.databind.SerializationFeature

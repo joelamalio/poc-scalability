@@ -1,4 +1,4 @@
-package br.com.joelamalio.scalability.hello.resources.eureka
+package br.com.joelamalio.scalabilityhello.resources.eureka
 
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.extensions.jsonBody

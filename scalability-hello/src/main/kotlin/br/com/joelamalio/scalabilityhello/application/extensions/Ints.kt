@@ -1,4 +1,4 @@
-package br.com.joelamalio.scalability.hello.application.extensions
+package br.com.joelamalio.scalabilityhello.application.extensions
 
 private const val DEFAULT_PORT = 7000
 
